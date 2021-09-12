@@ -1,0 +1,52 @@
+table {
+    font-size: 85%;
+    table-layout: fixed;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    vertical-align: text-top;
+}
+
+td {
+    word-wrap:break-word;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(209, 198, 183);
+    color: #000;
+}
+
+input,
+select {
+    background-color: rgb(245, 242, 238);
+    border-style: none;
+}
+
+table ul {
+    list-style: none;
+    white-space: nowrap;
+    text-align: left;
+    padding:0px;
+}
+
+.column-id, 
+.column-edit {
+    width : 4%;
+}
+
+.column-fname, 
+.column-lname,
+.column-email,
+.column-phone {
+    width : 12%;
+}
+
+.column-country {
+    width : 15%;
+}
+
+
+

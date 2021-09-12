@@ -1,10 +1,10 @@
 import './App.css';
-import ReactTable from './components/ReactTable';
+import Employee from './components/Employee';
 
 function App() {
   return (
     <div className="App">
-      <ReactTable/>
+      <Employee/>
     </div>
   );
 }

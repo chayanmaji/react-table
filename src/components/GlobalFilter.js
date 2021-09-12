@@ -14,8 +14,6 @@ const GlobalFilter = ({ filter, setFilter }) => {
             <input value={filter || ''} 
             onChange={(e)=>{
                 setValue(e.target.value);
-                // setValue(e.target.value)
-                // onChange(e.target.value)
                 }} />
         </span>
     )

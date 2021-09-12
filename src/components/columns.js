@@ -1,82 +1,50 @@
-import { format } from 'date-fns';
-import ColumnFilter from './ColumnFilter';
+import {CountryFilter} from './ColumnFilter';
 
 
 export const COLUMNS = [
     {
         Header: 'Id',
         accessor: 'id',
-        Footer: 'Id',
-        Filter: ColumnFilter,
-        disableFilters : true
+        disableFilters : true,
+        className : 'column-id'
+    },
+    {
+        Header : 'Edit',
+        accessor : (originalRow , rowIndex )=>(<div>{rowIndex + 1}</div>),
+        disableFilters : true,
+        disableSortBy: true,
+        className : 'column-edit'
     },
     {
         Header: 'First Name',
         accessor: 'first_name',
-        Footer: 'First Name',
-        //Filter: ColumnFilter
+        className : 'column-fname'
     },
     {
         Header: 'Last Name',
         accessor: 'last_name',
-        Footer: 'Last Name',
-        //Filter: ColumnFilter
+        className : 'column-lname'
     },
-    // {
-    //     Header: 'Name',
-    //     Footer: 'Name',
-    //     columns: [
-    //         {
-    //             Header: 'First Name',
-    //             accessor: 'first_name',
-    //             Footer: 'First Name',
-    //         },
-    //         {
-    //             Header: 'Last Name',
-    //             accessor: 'last_name',
-    //             Footer: 'Last Name'
-    //         }
-    //     ]
-    // },
     {
-        Header: 'Date Of Birth',
-        accessor: 'date_of_birth',
-        Footer: 'Date Of Birth',
-        Cell: ({ value }) => { return format( new Date(value), 'dd/MM/yyyy')},
-        //Filter: ColumnFilter
+        Header: 'Email',
+        accessor: 'email',
+        className : 'column-email'
     },
     {
         Header: 'Country',
         accessor: 'country',
-        Footer: 'Country',
-        //Filter: ColumnFilter
+        Filter: CountryFilter,
+        className : 'column-country'
     },
     {
         Header: 'Phone',
         accessor: 'phone',
-        Footer: 'Phone',
-        //Filter: ColumnFilter
+        className : 'column-phone'
+    },
+    {
+        Header: 'Address',
+        disableFilters : true,
+        accessor: ()=>(<div>Address</div>),
+        disableSortBy: true
     }
-    // {
-    //     Header: 'Info',
-    //     Footer: 'Info',
-    //     columns: [
-    //         {
-    //             Header: 'Date Of Birth',
-    //             accessor: 'date_of_birth',
-    //             Footer: 'Date Of Birth'
-    //         },
-    //         {
-    //             Header: 'Country',
-    //             accessor: 'country',
-    //             Footer: 'Country'
-    //         },
-    //         {
-    //             Header: 'Phone',
-    //             accessor: 'phone',
-    //             Footer: 'Phone',
-    //         }
-    //     ]
-    // },
-
 ]
