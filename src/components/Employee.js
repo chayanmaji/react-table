@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Data from './Data.json';
 import { COLUMNS } from './columns';
 import ReactTable from './ReactTable';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, OverlayTrigger, Popover, PopoverBody, PopoverHeader, ListGroup } from 'react-bootstrap';
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
-import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
+import { AiOutlineEdit, AiOutlineDelete, AiOutlineInfoCircle } from 'react-icons/ai';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import './Employee.css';
 import { countries } from './Utility';
@@ -44,7 +44,21 @@ const Employee = () => {
     }
 
     const editCell = (originalRow, rowIndex) => {
-        return (<div><AiOutlineEdit onClick={() => { setSelectedData(originalRow); setRowIndex(rowIndex); setShowFormModal(true); }} /></div>)
+        return (<div>
+            <AiOutlineEdit onClick={() => { setSelectedData(originalRow); setRowIndex(rowIndex); setShowFormModal(true); }} />
+
+            {/* <OverlayTrigger trigger="click" placement="left"
+                overlay={
+                    <Popover id={originalRow.id}>
+                        <Popover.Body>
+                            <strong>Holy guacamole!</strong> Check this info.
+                        </Popover.Body>
+                    </Popover>
+                }>
+                <AiOutlineInfoCircle />
+                
+            </OverlayTrigger> */}
+        </div>)
     }
 
     const prepareAddressToDelete = (employee, addressIndex) => {
@@ -95,11 +109,10 @@ const Employee = () => {
     const populateReactTableColumn = () => {
         const columns = COLUMNS;
         const editColumnIndex = columns.findIndex(e => e.Header === 'Edit');
-        if (editColumnIndex >= -1)
-        {
+        if (editColumnIndex >= -1) {
             columns[editColumnIndex].accessor = (originalRow, rowIndex) => (editCell(originalRow, rowIndex));
         }
-        
+
 
         //Update Address column 
         const headerColumnIndex = columns.findIndex(e => e.Header === 'Address');
@@ -167,9 +180,9 @@ const Employee = () => {
                     onSubmit={onSubmit} validationSchema={validationSchema} >
                     {
                         ({ values, errors, touched, dirty, resetForm, setFieldValue }) => {
-                            console.log('errors', errors);
-                            console.log('touched', JSON.stringify(touched));
-                            console.log('dirty', dirty);
+                            // console.log('errors', errors);
+                            // console.log('touched', JSON.stringify(touched));
+                            // console.log('dirty', dirty);
                             return (
                                 <>
                                     <Form>

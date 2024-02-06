@@ -79,7 +79,6 @@ const ReactTable = (props) => {
                                 {// Loop over the headers in each row
                                     headerGroup.headers.map(column => {
                                         const headerProps = column.getHeaderProps(column.getSortByToggleProps());
-                                        //console.log('headerProps', headerProps);
                                         const className = column.getHeaderProps({ className: column.className }).className;
                                         console.log('className', className);
                                         const { key, colSpan, role, title, onClick, style } = {...headerProps};
