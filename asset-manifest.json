@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/raect-table/static/css/main.0135863e.chunk.css",
+    "main.js": "/raect-table/static/js/main.4a3fb5b0.chunk.js",
+    "main.js.map": "/raect-table/static/js/main.4a3fb5b0.chunk.js.map",
+    "runtime-main.js": "/raect-table/static/js/runtime-main.c9459602.js",
+    "runtime-main.js.map": "/raect-table/static/js/runtime-main.c9459602.js.map",
+    "static/css/2.818011ed.chunk.css": "/raect-table/static/css/2.818011ed.chunk.css",
+    "static/js/2.2c06a290.chunk.js": "/raect-table/static/js/2.2c06a290.chunk.js",
+    "static/js/2.2c06a290.chunk.js.map": "/raect-table/static/js/2.2c06a290.chunk.js.map",
+    "static/js/3.59987fde.chunk.js": "/raect-table/static/js/3.59987fde.chunk.js",
+    "static/js/3.59987fde.chunk.js.map": "/raect-table/static/js/3.59987fde.chunk.js.map",
+    "index.html": "/raect-table/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/raect-table/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.0135863e.chunk.css.map": "/raect-table/static/css/main.0135863e.chunk.css.map",
+    "static/js/2.2c06a290.chunk.js.LICENSE.txt": "/raect-table/static/js/2.2c06a290.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9459602.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.2c06a290.chunk.js",
+    "static/css/main.0135863e.chunk.css",
+    "static/js/main.4a3fb5b0.chunk.js"
+  ]
+}
